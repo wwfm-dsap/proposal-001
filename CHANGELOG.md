@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ## [0.0.1-rtw.15] - Q2/2024
+Apr-05 - Added /static/11ty-store/  - Testing Headless CMS Shopify solution  
 Apr-04 - Added a store  
 Apr-04 - See UPDATE.md in /static/library - It's about evidence submission for cases and deals  
 
