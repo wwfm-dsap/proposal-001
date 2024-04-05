@@ -2,6 +2,7 @@
 
 # dependencies
 /static/hbnb/node_modules
+/static/11ty-store/node_modules
 /.pnp
 .pnp.js
 
