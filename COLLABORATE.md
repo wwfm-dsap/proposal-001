@@ -343,3 +343,29 @@ If git push generates 403 run this command:
 `git config --global --unset credential.helper`
 
 Then retry
+
+
+If you use zsh
+===================
+
+If you're in the repo locally, in your terminal. And it's slow prompting after running your last command.
+And if you run this command and it's still slow, then proceed to the next step below;
+
+```
+__git_prompt_git () {
+	GIT_OPTIONAL_LOCKS=0 command timeout 1s git "$@"
+}
+```
+
+Then you'll need to run these commands; 
+
+```
+git config --global --add oh-my-zsh.hide-status 1
+git config --global --add oh-my-zsh.hide-dirty 1
+```
+
+You'll also need to add the following into ~/.zshrc and remove git plugin
+
+```
+DISABLE_UNTRACKED_FILES_DIRTY="true"
+```
