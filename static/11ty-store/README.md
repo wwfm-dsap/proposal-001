@@ -1,36 +1,45 @@
-# Shopify Storefront reference with 11ty
+# Hydrogen template: Skeleton
 
-A reference site for exploring the Shopify storefront API with Eleventy
+Hydrogen is Shopify’s stack for headless commerce. Hydrogen is designed to dovetail with [Remix](https://remix.run/), Shopify’s full stack web framework. This template contains a **minimal setup** of components, queries and tooling to get started with Hydrogen.
 
-Running at https://shopify-11ty.netlify.app/
-Blogged at https://www.netlify.com/blog/
+[Check out Hydrogen docs](https://shopify.dev/custom-storefronts/hydrogen)
+[Get familiar with Remix](https://remix.run/docs/en/v1)
 
+## What's included
 
+- Remix
+- Hydrogen
+- Oxygen
+- Vite
+- Shopify CLI
+- ESLint
+- Prettier
+- GraphQL generator
+- TypeScript and JavaScript flavors
+- Minimal setup of components and routes
 
+## Getting started
+
+**Requirements:**
+
+- Node.js version 18.0.0 or higher
+
+```bash
+npm create @shopify/hydrogen@latest
 ```
-# install the dependencies
-npm i
 
-# Run the local dev server during development
-netlify dev
+## Building for production
 
-# Build the site
+```bash
 npm run build
 ```
 
-## Clone and deploy
+## Local development
 
-Make a copy of this site and deploy it for free to Netlify by clicking this button:
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/philhawksworth/shopify-11ty)
-
-
-## Environment variables
-
-This example site is preconfigured with the following environment variable (via the netlify.toml file) since these variables are safe to share. To customise this example to point at your own store in Shopify, you'll need to update these to your own values.
-
-```conf
-SHOPIFY_API_ENDPOINT = "{YOUR SHOPIFY STORE URL}/api/unstable/graphql.json"
-SHOPIFY_STOREFRONT_API_TOKEN = "{YOUR SHOPIFY STOREFRONT ACCESS TOKEN}"
+```bash
+npm run dev
 ```
 
+## Setup for using Customer Account API (`/account` section)
+
+Follow step 1 and 2 of <https://shopify.dev/docs/custom-storefronts/building-with-the-customer-account-api/hydrogen#step-1-set-up-a-public-domain-for-local-development>
