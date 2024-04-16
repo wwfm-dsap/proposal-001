@@ -3,6 +3,11 @@ import isbot from 'isbot';
 import {renderToReadableStream} from 'react-dom/server';
 import {createContentSecurityPolicy} from '@shopify/hydrogen';
 
+createContentSecurityPolicy({
+  connectSrc: [
+    'wss://akita-humorous-basically.ngrok-free.app:*',
+  ],
+});
 /**
  * @param {Request} request
  * @param {number} responseStatusCode

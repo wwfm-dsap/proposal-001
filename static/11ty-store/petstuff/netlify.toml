@@ -1,0 +1,10 @@
+[build]
+  command = "npm run build"  # Specify the build command for your site
+  publish = "dist"           # Specify the directory to deploy
+
+[context.production.environment]
+  # Add production environment variables if needed
+
+[context.branch-deploy]
+  command = "npm run build"  # Build command for branch deploys
+
