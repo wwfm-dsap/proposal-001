@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ## [0.0.1-rtw.15] - Q2/2024
+Apr-16 - Got static/11ty-store deployed to shopify.dev (oxygen) using this guide https://shopify.dev/docs/custom-storefronts/hydrogen/getting-started , but netlify-cli and netlify isn't working yet. I think when I push this commit after `npx shopify hydrogen deploy` (as per the above guide) netlify should see the `dist` directory that line generated (in the github repo) and netlify should then build the site ok - we'll see  
 Apr-16 - Going to try netlify-cli - removing .git and forgetting keeping it and setting it up as a submodule seems fine too  
 Apr-16 - Removed duplicate netlify.toml and netlify directory (the ones in the higher-most directory)  
 Apr-16 - Missing netlify.toml file and netlify directory, I suspect. I placed it in both the directory and build directory e.g. static/11ty-store/petstuff - Note this is no longer an 11ty-store. Also, failing this there's apparently also Hydrogen-react https://shopify.dev/docs/api/hydrogen-react  
