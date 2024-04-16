@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ## [0.0.1-rtw.15] - Q2/2024
+Apr-16 - Removed duplicate netlify.toml and netlify directory (the ones in the higher-most directory)  
 Apr-16 - Missing netlify.toml file and netlify directory, I suspect. I placed it in both the directory and build directory e.g. static/11ty-store/petstuff - Note this is no longer an 11ty-store. Also, failing this there's apparently also Hydrogen-react https://shopify.dev/docs/api/hydrogen-react  
 Apr-15 - Figured it out - I think. Let's see  
 Apr-15 - Left out the hidden files in the new 11ty-store. Re-instated them, now Netlify should build the store ok  
