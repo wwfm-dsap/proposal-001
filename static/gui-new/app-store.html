@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>App Store</title>
+<style>
+  .app {
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    margin: 10px;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+  }
+
+  .app.uninstall {
+    background-color: #dc3545;
+    color: white;
+  }
+
+  .app.install {
+    background-color: #007bff;
+    color: white;
+  }
+</style>
+</head>
+<body>
+<h1>Client-Side Cache/ Serverless (Android-Style) App Install/ Uninstall</h1>
+<a href="index.html">Home Screen</a></br>
+<button class="app" id="app1">Install Jellyfin</button>
+<button class="app" id="app2">Install App 2</button>
+<button class="app" id="app3">Install App 3</button>
+<script>
+  // Function to check if an app is installed
+  function isAppInstalled(appId) {
+    return localStorage.getItem(appId) === 'installed';
+  }
+
+  // Function to toggle app installation
+  function toggleAppInstallation(appId) {
+    if (isAppInstalled(appId)) {
+      localStorage.removeItem(appId);
+    } else {
+      localStorage.setItem(appId, 'installed');
+    }
+    updateAppButton(appId);
+  }
+
+  // Function to update app button based on installation state
+  function updateAppButton(appId) {
+    const appElement = document.getElementById(appId);
+    if (isAppInstalled(appId)) {
+      appElement.innerText = 'Uninstall App ' + appId.slice(-1);
+      appElement.classList.add('uninstall');
+      appElement.classList.remove('install');
+    } else {
+      appElement.innerText = 'Install App ' + appId.slice(-1);
+      appElement.classList.remove('uninstall');
+      appElement.classList.add('install');
+    }
+  }
+
+  // Initialize app buttons
+  document.querySelectorAll('.app').forEach(app => {
+    const appId = app.id;
+    updateAppButton(appId);
+    app.addEventListener('click', () => {
+      toggleAppInstallation(appId);
+    });
+  });
+
+  // Function to update app store based on installed apps
+  function updateAppStore() {
+    const appIds = ['app1', 'app2', 'app3'];
+    appIds.forEach(appId => {
+      updateAppButton(appId);
+    });
+  }
+
+  // Listen for changes in localStorage and update app store
+  window.addEventListener('storage', updateAppStore);
+
+</script>
+</body>
+</html>

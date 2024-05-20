@@ -5,10 +5,18 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and a combination of [Semantic Versioning](https://semver.org/spec/v2.0.0.html).    
 and a combination of [Prince2 Project Management](https://prince2.com).    
 
-   
+
 ## [Unreleased] 
 
+
+## [gui-0.7] - Q2/2024
+
+### Changed
+
+May-19 - Removed duplicate meta tag in index.html  - Also working on new client-side cache add/remove apps  
+
 ## [gui-0.6] - Q1/2024
+
 
 ### Added
 Mar-25 - Added sitemap generator  

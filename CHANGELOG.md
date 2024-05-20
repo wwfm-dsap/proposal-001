@@ -12,6 +12,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ## [0.0.1-rtw.15] - Q2/2024
+May-20 - Fixed client-side cache app install - visible at static/gui-new/  
+May-19 - Fixed issue in static/_treeview.json causing it not to load in static/index.html    
+May-19 - Deleted 11ty-store - Good experiment, but need to move on  
 Apr-16 - Got static/11ty-store deployed to shopify.dev (oxygen) using this guide https://shopify.dev/docs/custom-storefronts/hydrogen/getting-started , but netlify-cli and netlify isn't working yet. I think when I push this commit after `npx shopify hydrogen deploy` (as per the above guide) netlify should see the `dist` directory that line generated (in the github repo) and netlify should then build the site ok - we'll see  
 Apr-16 - Going to try netlify-cli - removing .git and forgetting keeping it and setting it up as a submodule seems fine too  
 Apr-16 - Removed duplicate netlify.toml and netlify directory (the ones in the higher-most directory)  

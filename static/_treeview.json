@@ -8,13 +8,6 @@
   },
   {
    "name": "<div class='title-line enable-link'><div class='icon i-hbnb'></div>Hotspotβnβ</div>",
-    "path": "./hbnb/index.html",
-    "_links": {
-      "html": "./hbnb/index.html"
-    }
-  },
-  {
-    "name": "<div class='title-line enable-link'><div class='icon i-hbnb'></div>Hβnβ GUI</div>",
     "path": "./gui/index.html",
     "_links": {
       "html": "./gui/index.html"
@@ -27,11 +20,11 @@
       "html": "./datro/index.html"
     }
   },
-  {
+ {
     "name": "<div class='page-scroll-fix'></div>",
     "path": "javascript:void(0)",
     "_links": {
       "html": "javascript:void(0)"
-    },
+    }
    }
 ]
