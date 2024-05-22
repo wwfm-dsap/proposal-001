@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ## [0.0.1-rtw.15] - Q2/2024
+May-21 - Modified the gui a bit with the new client-side cache method of showing/hiding apps - our alternative to install/uninstall  
 May-20 - Fixed client-side cache app install - visible at static/gui-new/  
 May-19 - Fixed issue in static/_treeview.json causing it not to load in static/index.html    
 May-19 - Deleted 11ty-store - Good experiment, but need to move on  

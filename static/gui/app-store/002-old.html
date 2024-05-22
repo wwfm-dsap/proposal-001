@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,7 +7,7 @@
 	<link href="css/breadcrumb.css" rel="stylesheet">
 	<link href="css/appstore.css" rel="stylesheet">
 	<link href="css/font-awesome.css" rel="stylesheet">
-    <link href="apps/000-000/style.css" rel="stylesheet">
+        <link href="apps/000-000/style.css" rel="stylesheet">
 	<link href="apps/002-001/style.css" rel="stylesheet">
 	<link href="apps/002-002/style.css" rel="stylesheet">
 	<link href="apps/002-003/style.css" rel="stylesheet">
@@ -62,6 +61,7 @@
 	   border-radius: 20px;
 	   min-height:98px;
 	}
+
 
 	.container .box .box-row {
 	   display:table-row;
@@ -159,80 +159,32 @@
 	   box-shadow: none!important;
 	}
 
-body {
-    background-color: #454545;
-}
-  .app {
+
+
+	.app {
+    display: inline-block;
     width: 100px;
-    max-height: 19px;
+    height: 40px;
+    margin: 10px;
     text-align: center;
-    line-height: 19px;
+    line-height: 40px;
     cursor: pointer;
     border: none;
     border-radius: 5px;
-    position: relative;
-    background-color: rgb(1, 1, 1, 0.1);
-    color: white ! Important;
   }
 
-  .app:hover {
-  background-color: red; /* Red color for hover */
-}
-
-.app:hover.added {
-  background-color: red; /* Blue color for hover when installed */
-}
-
-.app:hover.removed {
-  background-color: green; /* Blue color for hover when installed */
-}
-
-.app.remove:hover {
-  background-color: green;
-}
-  .added {
-    background-color: #007bff; /* Red color for installed apps */
-  color: white;
-  display: block;
-    max-height: 35px;
-    margin-top: -7px;
-    min-width: 164px;
+  .app.uninstall {
+    background-color: #dc3545;
+    color: white;
   }
 
-  .app.remove {
- color: white;
-  display: block;
-    max-height: 35px;
-    margin-top: -7px;
-    min-width: 164px;
-}
+  .app.install {
+    background-color: #007bff;
+    color: white;
+  }
 
-.app.add {
-  background-color: black; /* Red color for installed apps */
-  color: white;
-  display: block;
-    max-height: 35px;
-    margin-top: -7px;
-    min-width: 164px;
-}
-</style>
+	</style>
 
-<script>
-if (patternExists("./apps/001-001/active" . $cus_id . "*")) {
-}
-</script>
-
-
-<!-- google tracking code start --> 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-6BTNPTMXBF"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-6BTNPTMXBF');
-</script>
-<!-- google tracking code end -->
 </head>
 <body onload="document.body.classList.add('loaded')" >
 	<div class="container">
@@ -244,13 +196,13 @@ if (patternExists("./apps/001-001/active" . $cus_id . "*")) {
 							<a href="#" style="width:auto!Important;"><span class="icon icon-play"></span> <span class="text2">Entertainment</span></a>
 						</li>
 						<li>
-							<a href='000.html' style='width:auto!Important;filter: brightness(1);background:rgba(0,0,0,0.55);border: 1px solid rgba(255,255,255,0.4);position: initial; padding-left: 48px!Important; margin-top: 0px;'><span class="text2" style="margin-left:1vw;">Categories</span></a>
+							<a href="000.html" style="width:auto!Important;filter: brightness(1);background:rgba(0,0,0,0.55);border: 1px solid rgba(255,255,255,0.4);position: initial; padding-left: 48px!Important; margin-top: 0px;"><span class="text2" style="margin-left:1vw;">Categories</span></a>
 						</li>
 						<li class="btn noHover">
-							<a class='backtodash' href='000.html'><span class="text2">App Store</span></a>
+							<a class="backtodash" href="000.html"><span class="text2">App Store</span></a>
 						</li>
 						<li class="btn">
-							<a href='../dashboard/001-a.html'><span class="icon icon-search"></span> <span class="text"></span></a>
+							<a href="../dashboard/001-a.html"><span class="icon icon-search"></span> <span class="text"></span></a>
 						</li>
 					</ul>
 				</div>
@@ -258,20 +210,22 @@ if (patternExists("./apps/001-001/active" . $cus_id . "*")) {
 		</div>
 	</div>
 
-  <a href="#" style="cursor:pointer;">
+<button class="app" id="app1">Install App 1</button>
+<button class="app" id="app2">Install App 2</button>
+<button class="app" id="app3">Install App 3</button>
+
+       <a href="#" style="cursor:pointer;">
 	<div class="square-002-001">
 		<div class="content-002-001">
 			<div class="table-002-001">
 				<div class="table-cell-002-001">
 					<img class="rs-002-001" src="apps/002-001/logo.png"><br>
-          
 					<span style="height: 3rem!Important; display: inline-block;"><object border="0" data="apps/002-001/title.svg" height="50px" style="z-index: -1!important; position: relative;" type="text/plain" width="100%">
-					</object> <button class="app" id="002-001"></button></span><br>
+					</object></span><br>
 				</div>
 			</div>
 		</div>
 	</div></a> 
- 
 
         <a href="#" style="cursor:pointer;">
         <div class="square-002-002">
@@ -280,7 +234,7 @@ if (patternExists("./apps/001-001/active" . $cus_id . "*")) {
                                 <div class="table-cell-002-002">
                                         <img class="rs-002-002" src="apps/002-002/logo.png"><br>
                                         <span style="height: 3rem!Important; display: inline-block;"><object border="0" data="apps/002-002/title.svg" height="50px" style="z-index: -1!important; position: relative;" type="text/plain" width="100%">
-                                        </object><button class="app" id="002-002"></button></span><br>
+                                        </object></span><br>
                                 </div>
                         </div>
                 </div>
@@ -291,85 +245,72 @@ if (patternExists("./apps/001-001/active" . $cus_id . "*")) {
                 <div class="content-002-003">
                         <div class="table-002-003">
                                 <div class="table-cell-002-003">
-                                        <img class="rs-002-003" src="apps/999-999/logo.png"><br>
-                                        <span style="height: 3rem!Important; display: inline-block;"><object border="0" data="apps/999-999/title.svg" height="50px" style="z-index: -1!important; position: relative;" type="text/plain" width="100%">
-                                        </object><button class="app" id="999-999"></button></span><br>
+                                        <img class="rs-002-003" src="apps/002-003/logo.png"><br>
+                                        <span style="height: 3rem!Important; display: inline-block;"><object border="0" data="apps/002-003/title.svg" height="50px" style="z-index: -1!important; position: relative;" type="text/plain" width="100%">
+                                        </object></span><br>
                                 </div>
                         </div>
                 </div>
         </div></a>
+		<script>
+			// Function to check if an app is installed
+			function isAppInstalled(appId) {
+			  return localStorage.getItem(appId) === 'installed';
+			}
+		  
+			// Function to toggle app installation
+			function toggleAppInstallation(appId) {
+			  if (isAppInstalled(appId)) {
+				localStorage.removeItem(appId);
+			  } else {
+				localStorage.setItem(appId, 'installed');
+			  }
+			  updateAppButton(appId);
+			}
+		  
+			// Function to update app button based on installation state
+			function updateAppButton(appId) {
+			  const appElement = document.getElementById(appId);
+			  if (isAppInstalled(appId)) {
+				appElement.innerText = 'Uninstall App ' + appId.slice(-1);
+				appElement.classList.add('uninstall');
+				appElement.classList.remove('install');
+			  } else {
+				appElement.innerText = 'Install App ' + appId.slice(-1);
+				appElement.classList.remove('uninstall');
+				appElement.classList.add('install');
+			  }
+			}
+		  
+			// Initialize app buttons
+			document.querySelectorAll('.app').forEach(app => {
+			  const appId = app.id;
+			  updateAppButton(appId);
+			  app.addEventListener('click', () => {
+				toggleAppInstallation(appId);
+			  });
+			});
+		  
+			// Function to update app store based on installed apps
+			function updateAppStore() {
+			  const appIds = ['app1', 'app2', 'app3'];
+			  appIds.forEach(appId => {
+				updateAppButton(appId);
+			  });
+			}
+		  
+			// Listen for changes in localStorage and update app store
+			window.addEventListener('storage', updateAppStore);
+		  
+		  </script>
 
-
-<script>
-  function isAppInstalled(appId) {
-    return localStorage.getItem(appId) === 'added';
-  }
-
-  function toggleAppInstallation(appId) {
-    if (isAppInstalled(appId)) {
-      localStorage.removeItem(appId);
-    } else {
-      localStorage.setItem(appId, 'added');
-    }
-    updateAppButton(appId);
-  }
-
-  function updateAppButton(appId) {
-  const appElement = document.getElementById(appId);
-  if (isAppInstalled(appId)) {
-    appElement.innerText = 'Added';
-    appElement.classList.add('added');
-    appElement.classList.remove('remove');
-  } else {
-    appElement.innerText = 'Removed';
-    appElement.classList.remove('added');
-    appElement.classList.add('remove');
-  }
-}
-
-document.querySelectorAll('.app').forEach(app => {
-  const appId = app.id;
-  updateAppButton(appId);
-  app.addEventListener('mouseover', () => {
-    if (isAppInstalled(appId)) {
-      app.innerText = 'Remove';
-    } else {
-      app.innerText = 'Add';
-    }
-  });
-  app.addEventListener('mouseout', () => {
-    updateAppButton(appId);
-  });
-});
-
-  document.querySelectorAll('.app').forEach(app => {
-    const appId = app.id;
-    updateAppButton(appId);
-    app.addEventListener('click', () => {
-      toggleAppInstallation(appId);
-    });
-  });
-
-  function updateAppStore() {
-    const appIds = ['002-001', '002-002', '999-999'];
-    appIds.forEach(appId => {
-      updateAppButton(appId);
-    });
-  }
-
-  document.addEventListener('DOMContentLoaded', function() {
-    // Function to handle navigation to the app store when clicking the "+Add" button
-    function handleAddButtonClick(event) {
-      event.preventDefault();
-      window.location.href = 'app-store/002.html';
-    }
-
-    // Initialize the "+Add" button click event listener
-    const addButton = document.getElementById('AddButton');
-    addButton.addEventListener('click', handleAddButtonClick);
-  });
-
-  window.addEventListener('storage', updateAppStore);
-</script>
+	<script src="js/breadcrumb.js">
+	</script> 
+	<script src="js/jquery-2.1.4.min.js">
+	</script> 
+	<script src="js/main.js">
+	</script> 
+	<script src="js/jquery.modallink-1.0.0.js">
+	</script>
 </body>
 </html>

@@ -12,7 +12,7 @@ and a combination of [Prince2 Project Management](https://prince2.com).
 ## [gui-0.7] - Q2/2024
 
 ### Changed
-
+May-21 - Bit of an issue with drag/drop to remove app icons, but the gui-new concept is proven enough to begin adding to gui   
 May-19 - Removed duplicate meta tag in index.html  - Also working on new client-side cache add/remove apps  
 
 ## [gui-0.6] - Q1/2024
