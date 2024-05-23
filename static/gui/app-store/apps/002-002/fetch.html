@@ -1,55 +1,30 @@
-<<<<<<< HEAD
-<!doctype html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-        <head>
-        <meta charset="utf-8">
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Page-Enter" content="progid:DXImageTransform.Microsoft.Fade(Duration=0.5)">
+    <meta http-equiv="Page-Exit" content="progid:DXImageTransform.Microsoft.Fade(Duration=0.5)">
+    <script src="../../../dashboard/js/jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Check if the URL contains "datro."
+            if (window.location.hostname.includes("datro.")) {
+                window.location.href = 'https://demo.jellyfin.org/stable/web/index.html';
+            } else {
+                // Redirect to the local server
+                window.location.href = 'http://' + window.location.hostname + ':' + window.location.port;
+            }
 
-        <script src="../../../dashboard/js/jquery-3.3.1.min.js"></script>
-
-           <script>
-           
-           if (window.location.href.indexOf("datro.") > -1) {
-           window.location.href = 'https://' + 'linuxserver.io/blog/self-hosted-web-based-emulation' ;
-           }
-
-           if(document.URL.indexOf("datro.") <= -1){
-           window.location.href = 'https://' + window.location.hostname + window.location.port + ':3000/frontend/index.html'  ;
-           }
-
-        </script> 
-
-        <meta http-equiv="Page-Enter" content="progid:DXImageTransform.Microsoft.Fade(Duration=0.5)">
-        <meta http-equiv="Page-Exit" content="progid:DXImageTransform.Microsoft.Fade(Duration=0.5)">
+            // Add a timeout to handle cases where the port doesn't load within a reasonable timeframe
+            setTimeout(function() {
+                // Redirect back to the previous page with an error message
+                window.history.back();
+                // You can also display an alert or some other message to inform the user about the issue
+                alert("Failed to load the local server. Please try again later.");
+            }, 10000); // Adjust the timeout duration (in milliseconds) as needed
+        });
+    </script>
 </head>
 <body id="body">
 </body>
 </html>
-=======
-<!doctype html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-        <head>
-        <meta charset="utf-8">
-
-        <script src="../../../dashboard/js/jquery-3.3.1.min.js"></script>
-
-           <script>
-           
-           if (window.location.href.indexOf("datro.") > -1) {
-           window.location.href = 'https://' + 'guacamole.bucklerfamilyestate.com/#/?username=demo&password=demo' ;
-           }
-
-           if(document.URL.indexOf("datro.") <= -1){
-           window.location.href = 'https://' + 'guacamole.bucklerfamilyestate.com/#/?username=demo&password=demo' ;
-           }
-
-        </script> 
-
-        <meta http-equiv="Page-Enter" content="progid:DXImageTransform.Microsoft.Fade(Duration=0.5)">
-        <meta http-equiv="Page-Exit" content="progid:DXImageTransform.Microsoft.Fade(Duration=0.5)">
-</head>
-<body id="body">
-</body>
-</html>
->>>>>>> 741d0a0ca1ee372699f08f24b26ce103144db70c

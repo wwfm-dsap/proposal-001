@@ -6,10 +6,19 @@
 	<link href="//datro.xyz/" rel="canonical">
 	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0, shrink-to-fit=no" name="viewport">
 	<script type="type/javascript">
-	             var host = "datro.xyz";
-	             if {{ host == window.location.host} && {window.location.protocol != "https:""}}
-	             window.location.protocol = "https";
-	</script>
+        function redirectUser() {
+            var hostname = window.location.hostname;
+        
+            // Check if the hostname contains "hbnb.local"
+            if (hostname.indexOf("hbnb.local") !== -1) {
+                // Local hosting, force HTTP
+                window.location.replace("http://datro.xyz/");
+            } else {
+                // Online hosting, use protocol-relative URL
+                window.location.replace("//datro.xyz/");
+            }
+        }
+        </script>
 	<meta content="HotspotBnB GUI" name="description">
 	<meta content="HotspotBnB GUI" name="author">
 	<title>Search Apps</title>
@@ -108,7 +117,7 @@ input:focus::placeholder {
 	       .role-buttons {margin:5px!important;color:white!important;}
 	       .rounded-circle {margin-top:0!important; margin-bottom:15px;}
 	       .btn:hover {background:#333366!important;}
-	       .rolestore-buttons {float:left; postion:absolute; margin-top:0!important;text-align:center!important; width:100%!important; padding-top:0px; margin-bottom:1rem;}
+	       .rolestore-buttons {float:left; position:absolute; margin-top:0!important;text-align:center!important; width:100%!important; padding-top:0px; margin-bottom:1rem;}
 	       .btn-success {max-width:205px!Important;min-width:268px!Important;}
 	       .btn-lg {padding-left:20px!Important; justify-content: center!Important; display:inline-flex!important;}
 

@@ -2,6 +2,9 @@
 <html>
 <head>
     <title>Hβnβ Entertainment Screen</title>
+    <meta charset="utf-8">
+	<meta content="1" http-equiv="Expires">
+	<link href="//datro.xyz/" rel="canonical">
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="media/css/breadcrumb.css">
@@ -17,6 +20,20 @@
     <link rel="stylesheet" href="../app-store/apps/002-007/style.css">
     <link rel="stylesheet" href="../app-store/apps/002-008/style.css">
     <link rel="stylesheet" href="../app-store/apps/999-999/style.css">
+    <script>
+         function redirectUser() {
+            var hostname = window.location.hostname;
+        
+            // Check if the hostname contains "hbnb.local"
+            if (hostname.indexOf("hbnb.local") !== -1) {
+                // Local hosting, force HTTP
+                window.location.replace("http://datro.xyz/");
+            } else {
+                // Online hosting, use protocol-relative URL
+                window.location.replace("//datro.xyz/");
+            }
+        }
+    </script>
     <style>
         @font-face {
             font-family: 'FontAwesome';
