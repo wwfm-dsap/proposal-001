@@ -55,7 +55,7 @@
 @media screen and (max-width: 900px) {
 .square-999-999 {
     min-width: 25vw;
-    min-height: 16vw;
+    min-height: 12vw;
     line-height: 8vw;
 }
 }

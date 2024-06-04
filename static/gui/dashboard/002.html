@@ -2,9 +2,6 @@
 <html>
 <head>
     <title>Hβnβ Entertainment Screen</title>
-    <meta charset="utf-8">
-	<meta content="1" http-equiv="Expires">
-	<link href="//datro.xyz/" rel="canonical">
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="media/css/breadcrumb.css">
@@ -20,20 +17,6 @@
     <link rel="stylesheet" href="../app-store/apps/002-007/style.css">
     <link rel="stylesheet" href="../app-store/apps/002-008/style.css">
     <link rel="stylesheet" href="../app-store/apps/999-999/style.css">
-    <script>
-         function redirectUser() {
-            var hostname = window.location.hostname;
-        
-            // Check if the hostname contains "hbnb.local"
-            if (hostname.indexOf("hbnb.local") !== -1) {
-                // Local hosting, force HTTP
-                window.location.replace("http://datro.xyz/");
-            } else {
-                // Online hosting, use protocol-relative URL
-                window.location.replace("//datro.xyz/");
-            }
-        }
-    </script>
     <style>
         @font-face {
             font-family: 'FontAwesome';
@@ -186,16 +169,19 @@
 </head>
 <body style="overflow: inherit !important; height: inherit !important; display: visible;" onload="document.body.classList.add('loaded'); updateHomeScreen();">
 <div id="apps-container" class="apps-container">
-    <!-- Apps will be dynamically added here -->
 </div>
+<div class="recycle-bin" id="trash">Recycle Bin</div>
+
 
 <script>
+
 function updateHomeScreen() {
     const appsContainer = document.getElementById('apps-container');
     appsContainer.innerHTML = ''; // Clear existing apps
     const appIds = ['002-001', '002-002', '999-999']; // Using class-based IDs
     appIds.forEach(appId => {
-        if (localStorage.getItem(appId) === 'added') {
+        const appInstalled = localStorage.getItem(appId) === 'added';
+        if (appInstalled || appId === '999-999') {
             const appElement = document.createElement('a');
             appElement.href = getAppLink(appId); // Set the hyperlink
             appElement.style.cursor = 'pointer';
@@ -224,7 +210,7 @@ function updateHomeScreen() {
 function handleAppLinkClick(event) {
     // Prevent default link behavior to avoid reloading the page
     event.preventDefault();
-    
+
     // Redirect to the app link
     const href = event.target.href;
     window.location.href = href;
@@ -263,7 +249,7 @@ function handleDrop(event) {
             appElement.remove();
             localStorage.removeItem(appId);
             updateAppStore(); // Update app store after removal
-            
+
             // Reload only the apps-container to update the remaining app icons
             const appsContainer = document.getElementById('apps-container');
     psContainer.innerHTML = ''; // Clear existing apps
@@ -283,13 +269,11 @@ function updateAppStore() {
     const appIds = ['002-001', '002-002', '999-999'];
     appIds.forEach(appId => {
         const installState = localStorage.getItem(appId);
-        const installButton = document.getElementById(appId);
-        if (installButton) {
-            if (installState === 'added') {
-                installButton.innerText = '' + appId.slice(-15);
-            } else {
-                installButton.innerText = '' + appId.slice(-15);
-            }
+        const installAppCheckbox = document.getElementById(appId);
+        if (installAppCheckbox) {
+            // Assuming installAppCheckbox is an AppCheckbox element
+            installAppCheckbox.checked = installState === 'added';
+            // You may need to set other properties based on your AppCheckbox implementation
         }
     });
 }
@@ -297,11 +281,13 @@ function updateAppStore() {
 // Listen for changes in the localStorage and update home screen
 window.addEventListener('storage', updateHomeScreen);
 
+
 </script>
 
 <script src="media/js/breadcrumb.js"></script>
 <script src="media/js/jquery-2.1.4.min.js"></script>
 <script src="media/js/main.js"></script>
 <script type="text/javascript" src="https://www.jqueryscript.net/demo/Simple-iFrame-Modal-Plugin-With-jQuery-modallink/src/jquery.modallink-1.0.0.js"></script>
+
 </body>
 </html>
