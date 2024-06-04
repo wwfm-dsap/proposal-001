@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+Jun-06 - Bit of housekeeping to fix some weird weird things - like index.html all reverting to apache2 homepages  - fixed in any case  
 Jun-06 - Added toggle buttons to app icons in app-store for static/gui on the media tab - game changer using client-side cache to add/remove app icons too  
 
 ### Changed
