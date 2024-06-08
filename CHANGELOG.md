@@ -13,6 +13,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.0.1-rtw.15] - Q3/2024
 
+### Fixed
+
+Jun-07 - Few css fixes on static/gui - see its CHANGELOG too for more details  
+
+
 ### Added
 
 Jun-06 - Bit of housekeeping to fix some weird weird things - like index.html all reverting to apache2 homepages  - fixed in any case  

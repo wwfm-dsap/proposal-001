@@ -14,18 +14,18 @@
 
   /* Style for the toggle */
   .toggle {
-max-width: 85%;
-  background-color: rgba(255, 255, 255, 0.05);
-  max-height: 2.25pc;
-  min-height: 2.25pc;
-  border-radius: 0.85pc;
-  height: 3pc;
-  rotate: 180deg;
-  width: 70%;
-  min-width: 70%;
-  text-align: -moz-center;
-  padding-top: 0.5pc;
-  margin-top:0pc;
+    max-width: 100%;
+    background-color: rgba(255, 255, 255, 0.05);
+    max-height: 2.25pc;
+    min-height: 2.25pc;
+    border-radius: 0.85pc;
+    height: 3pc;
+    rotate: 180deg;
+    width: 100%;
+    min-width: 100%;
+    text-align: center ! Important;
+    padding-top: 0.5pc;
+    margin-top: 0pc;
   }
 
   /* Style for the actual checkbox */
