@@ -96,7 +96,7 @@ Main Components
     border: 1px solid transparent;
     height: 1.5rem;
     box-shadow: -3px -2px #454545;
-    margin-top: -1vh;
+    margin-top: -3.5em;
 }
 
 .cd-header {
@@ -140,19 +140,21 @@ Main Components
 }
 
 .forminput {
-  border: 1px solid transparent!important;
-  margin-top: -1.5rem;
-  background: transparent;
-  opacity: 0.6;
-  max-width: 17rem;
-  text-align: center;
-  padding: 5px;
-  position: fixed;
-  margin-left: -7.5rem;
-  color: dimgrey;
-  font-weight: 800!important;
-  letter-spacing: 0.2em;
-  font-size: 1.7rem;
+    border: 1px solid transparent !important;
+    margin-top: -1.25em;
+    background: transparent;
+    opacity: 0.6;
+    max-width: 17rem;
+    text-align: center;
+    padding: 0.75em;
+    position: fixed;
+    margin-left: -7.5rem;
+    font-weight: 800 !important;
+    letter-spacing: 0.2em;
+    font-size: 1.7rem;
+    height: 0;
+    margin-bottom: 100%;
+    width: 100%;
     }
 
 @media all and (max-width:410px) {

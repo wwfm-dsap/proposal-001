@@ -8,14 +8,11 @@
         <link href="css/breadcrumb.css" rel="stylesheet">
         <link href="css/appstore.css" rel="stylesheet">
         <link href="apps/000-000/style.css" rel="stylesheet">
-        <link href="apps/002-001/style.css" rel="stylesheet">
-        <link href="apps/002-002/style.css" rel="stylesheet">
-        <link href="apps/002-003/style.css" rel="stylesheet">
+        <link href="apps/006-001/style.css" rel="stylesheet">
+        <link href="apps/006-002/style.css" rel="stylesheet">
+        <link href="apps/006-003/style.css" rel="stylesheet">
         <link href="apps/999-999/style.css" rel="stylesheet">
         <style>
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
   :root {
     --sz: 10vmin;
@@ -217,16 +214,16 @@ body {
                                 <div class="box-cell box1">
                                         <ul class="breadcrumb" id="btn noHover">
                                                 <li class='btn noHover'>
-                                                        <a href="#" style="width:auto!Important;"><span class="icon icon-play"></span> <span class="text2">Entertainment</span></a>
+                                                        <a href="#" style="width:auto!Important;"><span class="icon icon-play"></span> <span class="text2">Other</span></a>
                                                 </li>
                                                 <li>
-                                                        <a href='000.html' style='width:auto!Important;filter: brightness(1);background:rgba(0,0,0,0.55);border: 1px solid rgba(255,255,255,0.4);position: initial; padding-left: 48px!Important; margin-top: 0px;'><span class="text2" style="margin-left:1vw;">Categories</span></a>
+                                                        <a href="000.html" style="width:auto!Important;filter: brightness(1);background:rgba(0,0,0,0.55);border: 1px solid rgba(255,255,255,0.4);position: initial; padding-left: 48px!Important; margin-top: 0px;"><span class="text2" style="margin-left:1vw;">Categories</span></a>
                                                 </li>
                                                 <li class="btn noHover">
-                                                        <a class='backtodash' href='000.html'><span class="text2">App Store</span></a>
+                                                        <a class="backtodash" href="000.html"><span class="text2">App Store</span></a>
                                                 </li>
                                                 <li class="btn">
-                                                        <a href='../dashboard/001-a.html'><span class="icon icon-search"></span> <span class="text"></span></a>
+                                                        <a href="../dashboard/001-a.html"><span class="icon icon-search"></span> <span class="text"></span></a>
                                                 </li>
                                         </ul>
                                 </div>
@@ -234,15 +231,16 @@ body {
                 </div>
         </div>
 
-        <a href="#" style="cursor:pointer;">
-        <div class="square-002-001">
-                <div class="content-002-001">
-                        <div class="table-002-001">
-                                <div class="table-cell-002-001">
-                                        <img class="rs-002-001" src="apps/002-001/logo.png"><br>
 
+
+      <a href="#" style="cursor:pointer;">
+        <div class="square-006-001">
+                <div class="content-006-001">
+                        <div class="table-006-001">
+                                <div class="table-cell-006-001">
+                                        <img class="rs-006-001" src="apps/006-001/logo.png"><br>
                                                 <div class="toggle">
-                                                        <input class="app-checkbox" id="002-001" type="checkbox"> <label class="app-label install" for="002-001"><span class="thumb"></span></label>
+                                                        <input class="app-checkbox" id="006-001" type="checkbox"> <label class="app-label install" for="006-001"><span class="thumb"></span></label>
                                                 </div><span style="height: 3rem!important; display: inline-block; max-width: 13vw!important;"></span>
                                         <br>
                                 </div>
@@ -251,20 +249,22 @@ body {
         </div></a>
 
 
-        <a href="#" style="cursor:pointer;">
-        <div class="square-002-002">
-                <div class="content-002-002">
-                        <div class="table-002-002">
-                                <div class="table-cell-002-002">
-                                        <img class="rs-002-002" src="apps/002-002/logo.png"><br>
+ <a href="#" style="cursor:pointer;">
+        <div class="square-006-002">
+                <div class="content-006-002">
+                        <div class="table-006-002">
+                                <div class="table-cell-006-002">
+                                        <img class="rs-006-002" src="apps/006-002/logo.png"><br>
+
                                                 <div class="toggle">
-                                                        <input class="app-checkbox" id="002-002" type="checkbox"> <label class="app-label install" for="002-002"><span class="thumb"></span></label>
-                                                </div><span style="height: 3rem!Important; display: inline-block; max-width: 13vw!important;"></span>
+                                                        <input class="app-checkbox" id="006-002" type="checkbox"> <label class="app-label install" for="006-002"><span class="thumb"></span></label>
+                                                </div><span style="height: 3rem!important; display: inline-block; max-width: 13vw!important;"></span>
                                         <br>
                                 </div>
                         </div>
                 </div>
         </div></a>
+
 
         <a href="#" style="cursor:pointer;">
         <div class="square-999-999">
@@ -298,7 +298,7 @@ function toggleAppInstallation(appId) {
 function updateHomeScreen() {
     const appsContainer = document.getElementById('apps-container');
     appsContainer.innerHTML = ''; // Clear existing apps
-    const appIds = ['002-001', '002-002', '999-999']; // Using class-based IDs
+    const appIds = ['006-001', '006-002', '999-999']; // Using class-based IDs
     appIds.forEach(appId => {
         const appInstalled = localStorage.getItem(appId) === 'added';
         const appElement = document.createElement('a');
@@ -330,9 +330,9 @@ function updateHomeScreen() {
 }
     function getAppColor(appId) {
         switch (appId) {
-            case '002-001':
+            case '006-001':
                 return 'red';
-            case '002-002':
+            case '006-002':
                 return 'blue';
             default:
                 return 'gray';

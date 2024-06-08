@@ -296,10 +296,11 @@ function toggleAppInstallation(appId) {
     }
 
 function updateHomeScreen() {
-    const appsContainer = document.getElementById('apps-container');
-    appsContainer.innerHTML = ''; // Clear existing apps
-    const appIds = ['002-001', '002-002', '999-999']; // Using class-based IDs
-    appIds.forEach(appId => {
+  const appsContainer = document.getElementById('apps-container');
+  appsContainer.innerHTML = ''; // Clear existing apps
+  const appIds = ['002-001', '002-002', '999-999'];
+  appIds.forEach(appId => {
+    const appElement = document.createElement('a');    appIds.forEach(appId => {
         const appInstalled = localStorage.getItem(appId) === 'added';
         const appElement = document.createElement('a');
         appElement.href = getAppLink(appId); // Set the hyperlink
@@ -324,10 +325,18 @@ function updateHomeScreen() {
                 </div>
             </div>
         `;
-        appElement.addEventListener('dragstart', handleDragStart);
-        appsContainer.appendChild(appElement);
+
+
+ setCheckboxState(appId);
+
+    appElement.addEventListener('click', function() {
+      toggleAppInstallation(this.id);
     });
+    appsContainer.appendChild(appElement);
+  });
 }
+
+
     function getAppColor(appId) {
         switch (appId) {
             case '002-001':
@@ -338,6 +347,30 @@ function updateHomeScreen() {
                 return 'gray';
         }
     }
+
+
+
+function toggleAppInstallation(appId) {
+  if (appId === '999-999') {
+    // Enforce checked state for app 999-999
+    document.getElementById(appId).checked = true;
+    return;
+  }
+  const appCheckbox = document.getElementById(appId);
+  const appInstalled = isAppInstalled(appId);
+  localStorage.setItem(appId, appInstalled ? '' : 'added');
+  appCheckbox.checked = appInstalled;
+  updateHomeScreen();
+}}
+
+function setCheckboxState(appId) {
+  const appCheckbox = document.getElementById(appId);
+  const appInstalled = localStorage.getItem(appId) === 'added';
+  appCheckbox.checked = appInstalled; // Set initial state from localStorage
+  appCheckbox.addEventListener('change', function() {
+    localStorage.setItem(appId, this.checked ? 'added' : '');
+  });
+}
 
     function handleDragStart(event) {
         event.dataTransfer.setData('text/plain', event.target.id);
@@ -354,4 +387,3 @@ function updateHomeScreen() {
         </script>
 </body>
 </html>
-
