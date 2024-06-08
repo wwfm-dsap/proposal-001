@@ -96,6 +96,7 @@ Main Components
     border: 1px solid transparent;
     height: 1.5rem;
     box-shadow: -3px -2px #454545;
+    margin-top: -1vh;
 }
 
 .cd-header {
