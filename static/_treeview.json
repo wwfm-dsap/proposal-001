@@ -3,14 +3,11 @@
     "name": "<div class='title-line enable-link'><div class='icon f-datro'></div>Documents</div>",
     "path": "./library/index.html",
     "_links": {
-      "html": "./library/index.html"
-    }
-  },
-  {
+ {
    "name": "<div class='title-line enable-link'><div class='icon i-hbnb'></div>Hotspotβnβ</div>",
-    "path": "./gui/index.html",
+    "path": "./hbnb/old/index.html",
     "_links": {
-      "html": "./gui/index.html"
+      "html": "./hbnb/old/index.html"
     }
   },
   {
