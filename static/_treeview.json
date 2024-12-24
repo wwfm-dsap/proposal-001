@@ -1,23 +1,23 @@
 [
   {
+   "name": "<div class='title-line enable-link'><div class='icon i-hbnb'></div>Solution</div>",
+    "path": "https://hbnb.proposal-001.wwfm-dsap.com/",
+    "_links": {
+      "html": "https://hbnb.proposal-001.wwfm-dsap.com/"
+    }
+  },
+  {
+    "name": "<div class='title-line enable-link caps1'><div class='icon f-datro'></div>Homepage</div>",
+    "path": "./datro/index.html",
+    "_links": {
+      "html": "./datro/index.html"
+    }
+  },
+  {
     "name": "<div class='title-line enable-link'><div class='icon f-datro'></div>Documents</div>",
     "path": "./library/index.html",
     "_links": {
       "html": "./library/index.html"
-    }
-  },
-  {
-   "name": "<div class='title-line enable-link'><div class='icon i-hbnb'></div>Hotspotβnβ</div>",
-    "path": "./hbnb/old/index.html",
-    "_links": {
-      "html": "./hbnb/old/index.html"
-    }
-  },
-  {
-    "name": "<div class='title-line enable-link caps1'><div class='icon f-datro'></div>DATRO</div>",
-    "path": "./datro/index.html",
-    "_links": {
-      "html": "./datro/index.html"
     }
   },
  {

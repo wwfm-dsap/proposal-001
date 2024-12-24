@@ -6,6 +6,9 @@ and [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.0.1-rtw.15] - Q4/2024
+Dec-24 - Trying to get this React page to work on gh-pages so I don't need to use Netlify e.g. hbnb.domain.tld but instead I can just use a subdirectory e.g. domain.tld/hbnb/  
+
 ## [0.0.1-rtw.14] - Q1/2024
 Mar-25 - Improved the sitemap generator code in /static/hbnb/  
 Mar-12 - Added sitemap to the public directory, but the script in the generator directory produces one for the build directory too and it's not needed FYI  
