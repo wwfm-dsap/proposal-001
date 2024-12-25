@@ -7,6 +7,7 @@ and [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ## [Unreleased]
 
 ## [0.0.1-rtw.15] - Q4/2024
+Dec-25 - Made it so the parent directory is proposal-001.wwfm-dsap.com instead of datro.xyz  
 Dec-25 - Few tweaks  
 
 ## [0.0.1-rtw.14] - Q1/2024
