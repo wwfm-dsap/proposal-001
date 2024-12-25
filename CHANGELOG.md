@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.0.1-rtw.15] - Q4/2024
 
 ### Fixed
+Dec-25 - Reverted static/hbnb back to origin   
 Dec-24 - Few changes to static/hbnb  
 
 ## [0.0.1-rtw.15] - Q3/2024
